@@ -3,15 +3,15 @@
 
 import Foundation
 
-private let defaultConfiguration: URLSessionConfiguration = {
-  let configuration = URLSessionConfiguration.default
-  configuration.waitsForConnectivity = true
-  // configuration.timeoutIntervalForRequest = 60
-  // configuration.timeoutIntervalForResource = 3600 * 24 * 7
-  return configuration
-}()
-
-private let defaultSessionDelegate = WebAPIDefaultSessionDelegate()
+//private let defaultConfiguration: URLSessionConfiguration = {
+//  let configuration = URLSessionConfiguration.default
+//  configuration.waitsForConnectivity = true
+//  // configuration.timeoutIntervalForRequest = 60
+//  // configuration.timeoutIntervalForResource = 3600 * 24 * 7
+//  return configuration
+//}()
+//
+//private let defaultSessionDelegate = WebAPIDefaultSessionDelegate()
 
 
 public protocol WebAPI {
@@ -27,8 +27,8 @@ public protocol WebAPI {
 }
 
 public extension WebAPI {
-  var configuration: URLSessionConfiguration { defaultConfiguration }
-  var sessionDelegate: WebAPIDefaultSessionDelegate { defaultSessionDelegate }
+//  var configuration: URLSessionConfiguration { defaultConfiguration }
+//  var sessionDelegate: WebAPIDefaultSessionDelegate { defaultSessionDelegate }
   
   func fetch(_ service: WebAPIService) async throws -> Data {
     log("\(#function):\(#line)")

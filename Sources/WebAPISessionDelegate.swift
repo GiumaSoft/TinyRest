@@ -14,7 +14,7 @@ public final class WebAPIDefaultSessionDelegate: NSObject, URLSessionDelegate, U
   static private var isSelfSignedEnabled  : Bool { true }
   static private var isSSLPinningEnabled : Bool { false }
   static private var isURLRedirectPermitted : Bool { false }
-  static private var validSubdomainRegex : String { "httpbin.org" }
+  static private var validSubdomainRegex : String { ".*" }
   static private var sslLocalCertPath: String? { nil }
   
   // MARK: - Functions
